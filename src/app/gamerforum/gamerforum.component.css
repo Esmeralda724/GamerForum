@@ -1,0 +1,9 @@
+#background {
+    background-color: pink;
+    height: 100%;
+}
+
+.container{
+    box-align: center;
+    box-align: top;
+}

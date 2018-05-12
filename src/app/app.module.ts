@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { GamerforumComponent } from './gamerforum/gamerforum.component';
 import { ContactusComponent } from './contactus/contactus.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { ContactusComponent } from './contactus/contactus.component';
     AppComponent,
     HomeComponent,
     GamerforumComponent,
-    ContactusComponent
+    ContactusComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
