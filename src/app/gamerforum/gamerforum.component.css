@@ -1,9 +1,8 @@
-#background {
-    background-color: pink;
-    height: 100%;
+.status {
+    margin: 0 auto;
+    width: 210px;
 }
 
-.container{
-    box-align: center;
-    box-align: top;
+.post {
+    margin-left: 65%;
 }

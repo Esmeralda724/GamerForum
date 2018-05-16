@@ -1,32 +1,22 @@
-  <div id="background">
-<br>
-<img src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/25660257_1392693260877227_637094549393575668_n.jpg?_nc_cat=0&oh=4e3dfc7e62ea6cf8f93f67c7af5c7a6b&oe=5B5661BC" alt="profile picture"
-height="200">
-<br>
-<h3><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Xbox_one_logo.svg/2000px-Xbox_one_logo.svg.png" alt="xbox logo"
-height="20"> EsmeeMotionless </h3>
-<br>
-<h3><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_logo.svg/1200px-PlayStation_logo.svg.png" alt="Playstation logo"
-height="20"> N/A </h3>
-<br>
-<h3><img src="https://s3.amazonaws.com/freebiesupply/large/2x/steam-logo-transparent.png" alt="Playstation logo"
-height="20"> Esmee__Motionless </h3>
+    <form class="status">
+    <p>Status:</p>
+    <input type="text" name="status" placeholder="What do you need today?" [(ngModel)]="Status.content">
+    <button class="post" type="submit" value="Sumbit" (click)="addItem()">Post</button>
+  </form>
+  <br>
+  <img src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/25660257_1392693260877227_637094549393575668_n.jpg?_nc_cat=0&oh=4e3dfc7e62ea6cf8f93f67c7af5c7a6b&oe=5B5661BC"
+    alt="profile picture" height="200">
+  <br>
+  <h3>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Xbox_one_logo.svg/2000px-Xbox_one_logo.svg.png" alt="xbox logo"
+      height="20"> EsmeeMotionless </h3>
+  <br>
+  <h3>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_logo.svg/1200px-PlayStation_logo.svg.png"
+      alt="Playstation logo" height="20"> N/A </h3>
+  <br>
+  <h3>
+    <img src="https://s3.amazonaws.com/freebiesupply/large/2x/steam-logo-transparent.png" alt="Playstation logo" height="20"> Esmee__Motionless </h3>
+<p>hello {{goalText}}</p>
 
-<div class="container">
-    <form>
-      <div class="form-group">
-        <textarea class="form-control status-box" rows="2" placeholder="What's on your mind?"></textarea>
-      </div>
-    </form>
-    <div class="button-group pull-right">
-      <p class="counter">140</p>
-      <a href="#" class="btn btn-primary">Post</a>
-    </div>
-  
-    <ul class="posts">
-    </ul>
-  </div>
-
-
-  </div>
 
