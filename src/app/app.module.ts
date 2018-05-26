@@ -10,7 +10,9 @@ import { HomeComponent } from './home/home.component';
 import { GamerforumComponent } from './gamerforum/gamerforum.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { SignupComponent } from './signup/signup.component';
-
+import { LoginComponent } from './login/login.component';
+import { HttpClientModule } from '@angular/common/http';
+import { DataService } from './data.service';
 
 @NgModule({
   declarations: [
@@ -18,12 +20,15 @@ import { SignupComponent } from './signup/signup.component';
     HomeComponent,
     GamerforumComponent,
     ContactusComponent,
-    SignupComponent
+    SignupComponent,
+    LoginComponent,
+    DataService
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

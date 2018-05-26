@@ -1,22 +1,20 @@
 <div class="container">
-        <form action="action_page.php">
+        <form action="action_page.php" #contactForm="ngForm" (ngSubmit)="submit()">
       
           <label for="fname">First Name</label>
-          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          <input type="text" id="fname" name="firstName" placeholder="Your name.." required [(ngModel)]="user.fname" [(ngModel)]="contact.firstname">
       
           <label for="lname">Last Name</label>
-          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          <input type="text" id="lname" name="lastName" placeholder="Your last name.." required [(ngModel)]="user.lname"  [(ngModel)]="contact.lastname">
       
           <label for="email">E-mail</label>
-          <input type="text" placeholder="name@domain.com..">
+          <input type="text" placeholder="name@domain.com.." name="email" required [(ngModel)]="user.email" [(ngModel)]="contact.email">
 
-          <label for="phonenumber">Phone Number</label>
-          <input type="text" placeholder="(123) 456-7890..">
-
-          <label for="subject">Subject</label>
-          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+          <label for="comments">Comments</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." name="subject"style="height:200px" required [(ngModel)]="user.subject"  [(ngModel)]="contact.subject"></textarea>
       
-          <input type="submit" value="Submit">
+          <button type="button" class="cancelbtn" (click)="clear()">Cancel</button>
+          <input type="submit" value="submit">
       
         </form>
       </div>

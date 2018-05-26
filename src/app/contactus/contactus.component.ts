@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contactus',
@@ -6,10 +8,40 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contactus.component.css']
 })
 export class ContactusComponent implements OnInit {
+  public contact = {
+    firstName: '',
+    lastName: '',
+    email: '',
+    subject: '',
+  };
 
-  constructor() { }
+  public user = {
+    firstname: '',
+    lastname: '',
+    email: '',
+    subject: '',
+  };
+  constructor(private router: Router, public http: HttpClient) { }
 
   ngOnInit() {
   }
+
+  clear() {
+    this.user = {
+      firstname: '',
+      lastname: '',
+      email: '',
+      subject: '',
+    };
+  }
+
+submit() {
+  this.http.post('http://localhost:8080/sendEmail', this.contact)
+  .subscribe( (response: any) => {
+    console.log(response);
+  }, (error) => {
+    console.log(error);
+  });
+}
 
 }

@@ -1,8 +1,14 @@
-    <form class="status">
+<!-- statusbox -->
+<div>
+    <form #statusForm="ngForm" (ngSubmit)= "post()">
     <p>Status:</p>
-    <input type="text" name="status" placeholder="What do you need today?" [(ngModel)]="Status.content">
-    <button class="post" type="submit" value="Sumbit" (click)="addItem()">Post</button>
+    <input type="text" name="status" placeholder="What do you need today?" [(ngModel)]="status.post" required>
+    <input class="post" type="submit" value="Sumbit">
   </form>
+  <p *ngFor="let item of item.slice().reverse()">{{item.post}}</p>
+</div>
+
+<div>
   <br>
   <img src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/25660257_1392693260877227_637094549393575668_n.jpg?_nc_cat=0&oh=4e3dfc7e62ea6cf8f93f67c7af5c7a6b&oe=5B5661BC"
     alt="profile picture" height="200">
@@ -17,6 +23,6 @@
   <br>
   <h3>
     <img src="https://s3.amazonaws.com/freebiesupply/large/2x/steam-logo-transparent.png" alt="Playstation logo" height="20"> Esmee__Motionless </h3>
-<p>hello {{goalText}}</p>
+</div>
 
 

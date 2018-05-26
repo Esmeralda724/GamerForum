@@ -9,16 +9,22 @@ class Status {
   styleUrls: ['./gamerforum.component.css']
 })
 export class GamerforumComponent implements OnInit {
-  public Status = new Status;
-  public post = [];
-  public goalText: String = 'My first life goal';
+  public item = [];
+  public status = {
+    post: ''
+  };
+
   constructor() { }
 
   ngOnInit() {
   }
 
-  addItem() {
-  console.log(this.Status);
+ post() {
+  console.log(this.status);
+  this.item.push(this.status);
+  this.status = {
+    post: ''
+  };
 }
 
 
