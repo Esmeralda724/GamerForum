@@ -1,23 +1,23 @@
-<nav class="navbar navbar-expand-lg" style= "background-color: #e3f2fd;">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
   <a class="navbar-brand" href="home">
-    <img src="http://www.stickpng.com/assets/images/586273b931349e0568ad89df.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    <img id="logo" src="https://media.giphy.com/media/rgF2gZDIoNbpe/giphy.gif" class="d-inline-block align-top" alt="">
   </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="home">Home <span class="sr-only">(current)</span></a>
+        <li class="nav-item ">
+          <a class="nav-link" routerLink="home" routerLinkActive="active">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="gamerforum">GamerForum</a>
+          <a class="nav-link" routerLink="gamerforum" routerLinkActive="active">GamerForum</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="contactus">Contact Us</a>
+          <a class="nav-link" routerLink="contactus" routerLinkActive="active">Contact Us</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="login">Log In</a>
+        <li class="nav-item" id="test">
+          <a class="nav-link" routerLink="login" routerLinkActive="active">Log In</a>
         </li>
       </ul>
     </div>

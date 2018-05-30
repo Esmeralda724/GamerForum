@@ -10,18 +10,9 @@ export class LoginComponent implements OnInit {
 
   goals: any;
 
-  constructor(private route: ActivatedRoute, private router: Router, private _data: DataService) {
-    { 
-      this.route.params.subscribe(res => console.log(res.id));
-    }
-   }
+  constructor() { }
 
   ngOnInit() {
-    this._data.goal.subscribe(res => this.goals = res);
-  }
-
-  sendMeHome() {
-    this.router.navigate(['']);
   }
 
 }

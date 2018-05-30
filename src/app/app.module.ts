@@ -1,10 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
-
 import { AppRoutingModule } from './app-routing.module';
-
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { GamerforumComponent } from './gamerforum/gamerforum.component';
@@ -21,8 +18,7 @@ import { DataService } from './data.service';
     GamerforumComponent,
     ContactusComponent,
     SignupComponent,
-    LoginComponent,
-    DataService
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +26,7 @@ import { DataService } from './data.service';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

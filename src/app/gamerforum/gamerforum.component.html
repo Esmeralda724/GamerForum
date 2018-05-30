@@ -1,28 +1,24 @@
-<!-- statusbox -->
-<div>
-    <form #statusForm="ngForm" (ngSubmit)= "post()">
-    <p>Status:</p>
-    <input type="text" name="status" placeholder="What do you need today?" [(ngModel)]="status.post" required>
-    <input class="post" type="submit" value="Sumbit">
-  </form>
-  <p *ngFor="let item of item.slice().reverse()">{{item.post}}</p>
+<h1>Top Players of the Week</h1>
+
+<div class="container">
+  <div class="row">
+    <!-- <span class="border border-dark"> -->
+      <div class="col">
+        <h2>Jessica</h2>
+        <p>Bio..</p>
+      </div>
+    <!-- </span> -->
+    <!-- <span class="border border-dark"> -->
+      <div class="col">
+        <h2>Esme</h2>
+        <p>Bio..</p>
+      </div>
+    <!-- </span> -->
+    <!-- <span class="border border-dark"> -->
+      <div class="col">
+        <h2>Camy</h2>
+        <p>Bio..</p>
+      </div>
+    <!-- </span> -->
+  </div>
 </div>
-
-<div>
-  <br>
-  <img src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/25660257_1392693260877227_637094549393575668_n.jpg?_nc_cat=0&oh=4e3dfc7e62ea6cf8f93f67c7af5c7a6b&oe=5B5661BC"
-    alt="profile picture" height="200">
-  <br>
-  <h3>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Xbox_one_logo.svg/2000px-Xbox_one_logo.svg.png" alt="xbox logo"
-      height="20"> EsmeeMotionless </h3>
-  <br>
-  <h3>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_logo.svg/1200px-PlayStation_logo.svg.png"
-      alt="Playstation logo" height="20"> N/A </h3>
-  <br>
-  <h3>
-    <img src="https://s3.amazonaws.com/freebiesupply/large/2x/steam-logo-transparent.png" alt="Playstation logo" height="20"> Esmee__Motionless </h3>
-</div>
-
-
