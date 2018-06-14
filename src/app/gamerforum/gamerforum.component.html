@@ -1,24 +1,30 @@
-<h1>Top Players of the Week</h1>
+<img id="background" src="https://i.pinimg.com/originals/f0/c6/58/f0c658dcf75c4f8d7b44b621d8671451.jpg" alt="bacckground">
 
-<div class="container">
-  <div class="row">
-    <!-- <span class="border border-dark"> -->
-      <div class="col">
-        <h2>Jessica</h2>
-        <p>Bio..</p>
-      </div>
-    <!-- </span> -->
-    <!-- <span class="border border-dark"> -->
-      <div class="col">
-        <h2>Esme</h2>
-        <p>Bio..</p>
-      </div>
-    <!-- </span> -->
-    <!-- <span class="border border-dark"> -->
-      <div class="col">
-        <h2>Camy</h2>
-        <p>Bio..</p>
-      </div>
-    <!-- </span> -->
+<h1 id="title">
+  Top Players of the Week!
+</h1>
+
+<div class="card" *ngFor="let friend of friends">
+  <img id="image" [src]="friend.img" alt="Esme">
+  <h1 id="name">{{ friend.name }}</h1>
+  <p class="title">{{ friend.desc}}</p>
+  <p>
+    <button type="submit" (click)="addFriend(friend)" [disabled]="friend.added">Add friend</button>
+  </p>
+</div>
+<div class="containerforbox">
+  <div id="all">
+    <p id="pic">
+      <img id="image" src="../assets/esmee1.jpg">
+    </p>
+    <h1 id="Blog">EsmeeMotionless</h1>
+    <p id="text">Look at that feed !!! D.Va main or nah 💪 Add on Xbox GT: EsmeeMotionless 🎮 #dva #overwatch #xbox #feed #main #gamertag
+    </p>
+    <video controls id="vid">
+      <source src="../assets/POTG.mp4" type="video/mp4"> Your browser does not support the video tag.
+    </video>
   </div>
 </div>
+<!-- 
+<input type="hidden" name="username" [(ngModel)]="friends.username" value="EsmeeMotionless">
+<input type="hidden" name="bio" [(ngModel)]="friends.bio" value="I mostly play Overwatch on my Xbox. Add me if you wanna group up and play. SR: 2500 GT: EsmeeMotionless"> -->

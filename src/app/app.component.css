@@ -17,3 +17,6 @@
 .navbar-brand{
     padding: 0px;
 }
+#bar {
+    border-radius: 0 !important;
+}

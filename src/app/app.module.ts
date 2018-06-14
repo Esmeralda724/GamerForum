@@ -10,6 +10,8 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DataService } from './data.service';
+import { FriendsaddedComponent } from './friendsadded/friendsadded.component';
+import { FriendsService } from './friends.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { DataService } from './data.service';
     GamerforumComponent,
     ContactusComponent,
     SignupComponent,
-    LoginComponent
+    LoginComponent,
+    FriendsaddedComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,7 @@ import { DataService } from './data.service';
     FormsModule,
     HttpClientModule
   ],
-  providers: [DataService],
+  providers: [DataService, FriendsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

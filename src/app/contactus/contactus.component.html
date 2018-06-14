@@ -1,20 +1,24 @@
-<div class="container">
+  <img id="background" src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/4_rZPAF2eillpi19j/sakura-cherry-blossom-flower-animation_nptg5ua2x__F0000.png" alt="">
+  <div class="container">
+
         <form action="action_page.php" #contactForm="ngForm" (ngSubmit)="submit()">
       
-          <label for="fname">First Name</label>
+          <label id="color" for="fname">First Name</label>
           <input type="text" id="fname" name="firstName" placeholder="Your name.." required [(ngModel)]="user.fname" [(ngModel)]="contact.firstname">
       
-          <label for="lname">Last Name</label>
+          <label id="color" for="lname">Last Name</label>
           <input type="text" id="lname" name="lastName" placeholder="Your last name.." required [(ngModel)]="user.lname"  [(ngModel)]="contact.lastname">
       
-          <label for="email">E-mail</label>
-          <input type="text" placeholder="name@domain.com.." name="email" required [(ngModel)]="user.email" [(ngModel)]="contact.email">
+          <label id="color" for="email">E-mail</label>
+          <input type="text" id="email" placeholder="name@domain.com.." name="email" required [(ngModel)]="user.email" [(ngModel)]="contact.email">
 
-          <label for="comments">Comments</label>
-          <textarea id="subject" name="subject" placeholder="Write something.." name="subject"style="height:200px" required [(ngModel)]="user.subject"  [(ngModel)]="contact.subject"></textarea>
+          <label for="subject">Comments</label>
+        <textarea id="comments" name="comments" placeholder="Write something.." style="height:200px" [(ngModel)]="contact.comments"></textarea>
       
-          <button type="button" class="cancelbtn" (click)="clear()">Cancel</button>
-          <input type="submit" value="submit">
+          <input type="button" class="cancelbtn" (click)="clear();" value="Cancel">
+          <input type="submit" value="Submit">
+
+          
       
         </form>
       </div>
