@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
 
 @Component({
@@ -14,16 +13,16 @@ export class ContactusComponent implements OnInit {
     firstName: '',
     lastName: '',
     email: '',
-    subject: '',
+    comments: '',
   };
 
   public user = {
     firstname: '',
     lastname: '',
     email: '',
-    subject: '',
+    comments: '',
   };
-  constructor(private router: Router, public http: HttpClient, private modalService: NgbModal) { }
+  constructor(private router: Router, public http: HttpClient) { }
 
   ngOnInit() {
   }
@@ -33,11 +32,9 @@ export class ContactusComponent implements OnInit {
       firstname: '',
       lastname: '',
       email: '',
-      subject: '',
+      comments: '',
     };
   }
-
-
 
 submit() {
   this.http.post('http://localhost:8080/sendEmail', this.contact)
